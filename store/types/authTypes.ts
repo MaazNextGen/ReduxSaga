@@ -1,0 +1,10 @@
+const authTypes = {
+  LOGIN_SUCCESS: 'LOGIN_SUCCESS',
+  LOGIN: 'LOGIN',
+  LOGIN_FAILURE: 'LOGIN_FAILURE',
+  LOGIN_ROLLBACK: 'LOGIN_ROLLBACK',
+  LOGIN_COMMIT: 'LOGIN_COMMIT',
+  RESET: 'RESET',
+};
+
+export default authTypes;
