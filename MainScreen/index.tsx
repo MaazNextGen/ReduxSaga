@@ -14,8 +14,6 @@ const MainScreen = () => {
   const auth = useSelector(state => state.auth);
   const queue = useSelector(state => state.offline);
 
-  console.log('queue', JSON.stringify(queue.outbox, null, 2));
-
   const onSubmit = () => {
     dispatch(login({name: 'Maazy' + ' ' + Math.random().toFixed(2)}));
   };
