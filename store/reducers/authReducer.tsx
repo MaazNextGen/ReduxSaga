@@ -2,7 +2,7 @@ import authTypes from '../types/authTypes';
 
 const initialState = {
   isLogin: false,
-  userData: false,
+  userData: undefined,
   isLoading: false,
   error: undefined,
 };
@@ -36,7 +36,7 @@ function authReducer(state = initialState, action: any) {
       return {...state};
 
     default:
-      return {...state};
+      return state;
   }
 }
 

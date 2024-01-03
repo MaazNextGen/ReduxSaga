@@ -17,7 +17,7 @@ function* login(payload: any) {
     // yield delay(2000);
     const response: ResponseGenerator = yield call(
       ApiCaller.Post,
-      '/postssa',
+      '/posts',
       payload.payload,
     );
     if (response?.status === 201) {
