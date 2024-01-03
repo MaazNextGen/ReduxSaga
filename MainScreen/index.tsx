@@ -12,6 +12,9 @@ import {login} from '../store/actions/authActions';
 const MainScreen = () => {
   const dispatch = useDispatch();
   const auth = useSelector(state => state.auth);
+  const queue = useSelector(state => state.offline);
+
+  console.log('queue', JSON.stringify(queue.outbox, null, 2));
 
   const onSubmit = () => {
     dispatch(login({name: 'Maazy' + ' ' + Math.random().toFixed(2)}));
@@ -19,6 +22,8 @@ const MainScreen = () => {
 
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>OUTBOX PRESENT IN QUEUE {queue.outbox.length}</Text>
+
       <Text>MainScreen</Text>
 
       <Text>{auth?.userData?.name}</Text>

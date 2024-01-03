@@ -29,10 +29,9 @@ function authReducer(state = initialState, action: any) {
       };
     case authTypes.LOGIN_COMMIT:
       console.log('LOGIN COMMIT');
-      return {...state};
+      return {...state, userData: action.payload};
     case authTypes.LOGIN_ROLLBACK:
       console.log('LOGIN ROLLBACK');
-
       return {...state};
 
     default:
